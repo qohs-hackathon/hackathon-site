@@ -144,4 +144,9 @@ body {
   .boxcenter {
     width: 100%;
   }
+  .box {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+  }
 }
