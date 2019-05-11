@@ -1,37 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Work+Sans:300');
 
-body, html {
-  height: 100%;
-  margin: 0;
+body {
+  margin: 0px;
   padding: 0px;
-  font-family: 'Ubuntu', sans-serif;
-  background-color: #111112;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #aaccff;
+  background-image: url("bg.png");
+  background-attachment: fixed; 
+	background-size: cover;
+	display: grid;
+	align-items: center;
+	height: 100vh;
 }
 
 .heading {
-  background-color: #555566;
+  background-color: #3388ff;
   position: fixed;
   left: 0px;
   right: 0px;
   top: 0px;
   box-shadow: 1px 1px 10px black;
+  font-family: 'Nunito', sans-serif;
+  z-index: 5;
 }
 
 .heading h1 {
-  background-color: #444455;
+  background-color: #2277dd;
   padding: 5px;
   border-radius: 10px;
   margin-left: 20px;
   float: left;
-  //box-shadow: 3px 3px 3px #222233;
+  /*box-shadow: 3px 3px 3px #222233;*/
 }
 
 .toolbar {
   list-style-type: none;
   padding: 0;
-  //float: right;
+  /*float: right;*/
   overflow: hidden;
-  background-color: #555566;
+  /*background-color: #555566;*/
 }
 
 .toolbaritem {
@@ -44,7 +51,7 @@ body, html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: #444455;
+  background-color: #2277dd;
   border-radius: 10px;
   margin: 5px 10px 0px 0px;
   transition: .3s;
@@ -58,7 +65,7 @@ body, html {
   color: black;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: #555566;
+  background-color: #2277dd;
   border-radius: 10px;
   transition: .3s;
 }
@@ -68,7 +75,27 @@ body, html {
 }
 
 .offset-heading {
-  margin-top: 120px;
+  margin-top: 130px;
+}
+
+.grid1, .grid2, .grid3, .grid4 {
+  background: inherit;
+}
+
+.grid1 {
+  grid-template-columns: auto;
+}
+
+.grid2 {
+  grid-template-columns: auto auto;
+}
+
+.grid3 {
+  grid-template-columns: auto auto auto;
+}
+
+.grid4 {
+  grid-template-columns: auto auto auto auto;
 }
 
 .boxcenter {
@@ -77,20 +104,40 @@ body, html {
   margin-top: 0px;
 }
 
+.box:before {
+	content: "";
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: blur(10px);
+  margin: -20px;
+}
+
+.blurcontent {
+  background: inherit;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+  z-index: 1;
+  overflow: hidden;
+}
+
 .box {
   border-radius: 10px;
+  position: relative;
   padding: 20px;
   padding-top: 15px;
   margin-top: 30px;
-  background-color: #666677;
-  box-shadow: 10px 10px 10px black;
+  
 }
 
-.greenbox {
-  border-top: 5px solid #00ff00;
+.bluebox {
+  border-top: 5px solid #3388ff;
 }
 .redbox {
-  border-top: 5px solid #ff0000;
+  border-top: 5px solid #ff8833;
 }
 
 @media screen and (max-width: 900px) {
